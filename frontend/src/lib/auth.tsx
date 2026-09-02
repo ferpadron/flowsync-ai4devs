@@ -6,7 +6,7 @@ import {
   type ReactNode,
 } from 'react';
 import * as api from '@/lib/api';
-import type { UserDTO } from '@/lib/api';
+import { ApiError, type UserDTO } from '@/lib/api';
 
 const TOKEN_KEY = 'flowsync.token';
 
@@ -55,12 +55,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setUser(profile);
         setStatus('authenticated');
       })
-      .catch(() => {
+      .catch((err) => {
         if (cancelled) return;
-        localStorage.removeItem(TOKEN_KEY);
-        setToken(null);
-        setUser(null);
-        setStatus('guest');
+        // Only an actual auth failure (expired/revoked token) should log the
+        // user out. A transient network error or backend 5xx must not evict
+        // an otherwise-valid token — the effect retries on next mount.
+        if (
+          err instanceof ApiError &&
+          (err.status === 401 || err.status === 403)
+        ) {
+          localStorage.removeItem(TOKEN_KEY);
+          setToken(null);
+          setUser(null);
+          setStatus('guest');
+        }
       });
 
     return () => {
