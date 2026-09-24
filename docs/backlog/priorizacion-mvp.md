@@ -1,8 +1,8 @@
 # Priorización del MVP — impacto, complejidad, prioridad de negocio y secuencia técnica
 
-> **Estado:** PLANIFICACIÓN REVISADA · impacto, complejidad y secuencia `[PROVISIONAL]` · no es un compromiso de entrega · sin horas · sin Jira.
+> **Estado:** PLANIFICACIÓN REVISADA · impacto, complejidad y secuencia `[PROVISIONAL]` · no es un compromiso de entrega · sin horas · claves Jira solo en [`README.md`](./README.md) §4.1 (Jira no es fuente de verdad).
 > Última actualización: 2026-09-23. Etiquetas e identificadores: [`README.md`](./README.md).
-> El PRD determina el alcance aprobado ([`../prd/flowsync-mvp.md`](../prd/flowsync-mvp.md), [`../prd/alcance-mvp.md`](../prd/alcance-mvp.md)). Este documento no añade historias, criterios de aceptación ni decisiones de producto.
+> El alcance y las decisiones de producto confirmadas delimitan esta planificación; el PRD conserva su estado documental de Borrador ([`../prd/flowsync-mvp.md`](../prd/flowsync-mvp.md), [`../prd/alcance-mvp.md`](../prd/alcance-mvp.md)). Este documento no añade historias, criterios de aceptación ni decisiones de producto.
 
 ## 1. Criterios
 
@@ -87,11 +87,11 @@ MEDIO             —             INTERMEDIA            INTERMEDIA (prov.)
 BAJO              —                 —                     —
 
 [tend.] = complejidad INFORMACIÓN INSUFICIENTE; la posición sigue una tendencia provisional, no un nivel.
-FUERA DE MVP / ICEBOX: las 11 exclusiones explícitas de la sección 3.
+FUERA DE MVP / ICEBOX: los 11 grupos de exclusiones explícitas de la sección 3.
 No clasificadas (información insuficiente): las ideas de la sección 4. Los puntos abiertos de la sección 5 no son historias.
 ```
 
-Los elementos marcados `[tend.]` tienen complejidad `INFORMACIÓN INSUFICIENTE`: su posición sigue una tendencia provisional, no un nivel. Las coordenadas del gráfico siguiente son una ilustración ordinal: no son una medición ni una puntuación. Los tres estados y la lista son habilitadoras: aparecen por su impacto y complejidad propios, no como entregas independientes. En el gráfico, «Actualizar estado» es HU-E2-03, «Crear tarea» es HU-E2-01, «Filtro por estado» es FS-142 y «Vencidas» es FS-118.
+Los elementos marcados `[tend.]` tienen complejidad `INFORMACIÓN INSUFICIENTE`: su posición sigue una tendencia provisional, no un nivel. Las coordenadas del gráfico siguiente son una ilustración ordinal: no son una medición ni una puntuación. Los tres estados y la lista son habilitadoras: aparecen por su impacto y complejidad propios, no como entregas independientes. En el gráfico, «Actualizar estado» es HU-E2-03, «Crear tarea» es HU-E2-01, «Filtro por estado» es FS-142 y «Vencidas» es FS-118. El eje vertical no separa el impacto MEDIO del bajo: «Filtro por estado» y «Vencidas» tienen impacto MEDIO `[PROVISIONAL]` y se sitúan en torno a la línea media, así que el rótulo «bajo impacto» del cuarto cuadrante no debe leerse como su clasificación.
 
 ```mermaid
 quadrantChart

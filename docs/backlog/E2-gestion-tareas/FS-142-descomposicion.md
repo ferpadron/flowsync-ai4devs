@@ -1,13 +1,13 @@
 # FS-142 — Descomposición en tickets (planificación)
 
-> **Estado:** PLANIFICACIÓN REVISADA (FS-142.1) · contingencia de división `[CONTINGENTE]`, no aprobada (sección 7) · complejidad `[PROVISIONAL]` · no es un compromiso de entrega · sin horas · sin Jira.
+> **Estado:** PLANIFICACIÓN REVISADA (FS-142.1) · contingencia de división `[CONTINGENTE]`, no aprobada (sección 7) · complejidad `[PROVISIONAL]` · no es un compromiso de entrega · sin horas · claves Jira solo en [`../README.md`](../README.md) §4.1 (Jira no es fuente de verdad).
 > Última actualización: 2026-09-23. Etiquetas e identificadores: [`../README.md`](../README.md).
 > Esta descomposición no modifica la historia ni sus criterios de aceptación: [`FS-142.md`](./FS-142.md) sigue siendo la fuente de AC-1 a AC-5.
 
 ## 1. Fuentes
 
 - Historia y criterios de aceptación: [`FS-142.md`](./FS-142.md).
-- Requisitos y decisiones: RF-7, RF-3 y DP-1 en [`../../prd/flowsync-mvp.md`](../../prd/flowsync-mvp.md); alcance §4.2 en [`../../prd/alcance-mvp.md`](../../prd/alcance-mvp.md). El comportamiento ante un estado de filtro inválido procede de la «decisión del ejercicio P10», citada en `FS-142.md`.
+- Requisitos y decisiones: RF-7, RF-3 y DP-1 en [`../../prd/flowsync-mvp.md`](../../prd/flowsync-mvp.md); alcance §4.2 en [`../../prd/alcance-mvp.md`](../../prd/alcance-mvp.md). El comportamiento ante un estado de filtro inválido procede de la «decisión del ejercicio P10», citada en `FS-142.md` (decisión humana del ejercicio; procedencia de AC-4 y AC-5 en [`../README.md`](../README.md) §4).
 - Prioridad, secuencia entre historias y prerrequisitos externos: [`../priorizacion-mvp.md`](../priorizacion-mvp.md).
 - Historia hermana: [`FS-118-descomposicion.md`](./FS-118-descomposicion.md).
 

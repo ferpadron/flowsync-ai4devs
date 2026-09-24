@@ -1,6 +1,6 @@
 # FS-118 — Descomposición en tickets (planificación)
 
-> **Estado:** PLANIFICACIÓN REVISADA (descomposición y grafo) · tallas y riesgos `[PROVISIONAL]` · no es un compromiso de entrega · sin horas · sin Jira.
+> **Estado:** PLANIFICACIÓN REVISADA (descomposición y grafo) · tallas y riesgos `[PROVISIONAL]` · no es un compromiso de entrega · sin horas · claves Jira solo en [`../README.md`](../README.md) §4.1 (Jira no es fuente de verdad).
 > Última actualización: 2026-09-23. Etiquetas e identificadores: [`../README.md`](../README.md).
 > Esta descomposición no modifica la historia ni sus criterios de aceptación: [`FS-118.md`](./FS-118.md) sigue siendo la fuente de AC-1 a AC-5.
 
@@ -15,8 +15,8 @@
 
 - Los siete tickets cubren AC-1 a AC-5 de FS-118, sin cambiarlos.
 - **No forman parte de FS-118:** la creación base de tareas, los tres estados fijos, la lista compartida (E3), la infraestructura externa de pruebas, y capacidades no aprobadas (avisos, edición de fecha, filtros adicionales, actualización sin refrescar).
-- Esas capacidades son **dependencias externas** sin identificador persistido; se definen en [`../priorizacion-mvp.md`](../priorizacion-mvp.md).
-- Las dependencias de cada ticket viven en el grafo (sección 5). Este documento sustituye las dependencias por ticket de la primera descomposición.
+- De esa lista, la creación base, los tres estados, la lista compartida y la infraestructura de pruebas son **dependencias externas** sin identificador persistido, definidas en [`../priorizacion-mvp.md`](../priorizacion-mvp.md), sección «Prerrequisitos externos». Las capacidades no aprobadas quedan fuera del alcance y no son dependencias.
+- Las dependencias de cada ticket viven en el grafo (sección 5).
 
 ## 3. Tickets
 
@@ -275,7 +275,7 @@ Las ocho ambigüedades documentadas en [`FS-118.md`](./FS-118.md), agrupadas por
 | **D-3** | «Momento exacto en que una fecha pasa a estar vencida.» | FS-118.3 | FS-118.5, FS-118.6 y FS-118.7 (casos límite) |
 | **D-3** | «Hora de corte.» | FS-118.3 | FS-118.5, FS-118.6 y FS-118.7 |
 | **D-3** | «Zona horaria.» | FS-118.3 | FS-118.5, FS-118.6 y FS-118.7 |
-| **D-4** | «Comportamiento de una tarea en estado Hecha cuya fecha de vencimiento ya ha pasado.» | FS-118.3 | FS-118.5 y FS-118.6 |
+| **D-4** | «Comportamiento de una tarea en estado Hecha cuya fecha de vencimiento ya ha pasado.» | FS-118.3 | FS-118.5, FS-118.6 y FS-118.7 |
 | **D-5** | «Edición o eliminación de la fecha de vencimiento después de crear la tarea.» | — | — |
 
 - **D-5** permanece fuera del alcance confirmado. No genera tickets, aristas ni trabajo en esta descomposición.
@@ -323,7 +323,7 @@ Las ocho ambigüedades documentadas en [`FS-118.md`](./FS-118.md), agrupadas por
 - Ninguna estimación alcanza confianza ALTA: todos los tickets dependen de una externa aún no construida o de una decisión abierta.
 - **Optimismo:** no se descuenta tiempo por generación asistida, que ayuda con lo mecánico pero no con decisiones, revisión, integración ni validación manual. Se estima sin ver la creación base ni la lista, lo que sesga hacia el optimismo.
 - **Integración subestimada:** las tallas excluyen la integración, que se concentra en FS-118.7 con riesgo ALTO. Los defectos que aparezcan allí no están sumados a ningún ticket.
-- **Pruebas:** FS-118.6 cubre solo backend. La interfaz de AC-3, AC-4 y AC-5 solo se verifica a mano en FS-118.7, y añadir un runner al frontend no está aprobado.
+- **Pruebas:** FS-118.6 cubre solo backend, que es hoy la única capa con infraestructura de pruebas. La ubicación de la regla de FS-118.3 (backend o frontend) sigue siendo una decisión técnica abierta que este documento no toma. Si la regla reside en el backend, FS-118.6 la cubre. Si residiera en el frontend, su verificación automática quedaría fuera de FS-118.6 (no hay runner y añadirlo no está aprobado), y una comprobación manual en FS-118.7 no sustituye la cobertura automática que FS-118.6 exige para cerrarse: el DoD y el plan de verificación requerirían revisión humana antes de declarar completada la historia. La interfaz de AC-3, AC-4 y AC-5 solo se verifica a mano en FS-118.7.
 - **Decisiones abiertas:** las tallas de FS-118.1, FS-118.3, FS-118.4 y FS-118.5 son provisionales y cambian con D-1 a D-4.
 - **Verificaciones pendientes:** releer la creación base y la lista cuando existan y reconfirmar FS-118.1, FS-118.2, FS-118.4 y FS-118.5; confirmar el enfoque de aislamiento de pruebas antes de fijar FS-118.6.
 
@@ -368,7 +368,7 @@ Sin duraciones no puede determinarse el camino crítico temporal. Por número de
 | FS-118.3 | Están resueltas D-1, D-3 y D-4. | Además, los estados existen si D-4 lo exige. |
 | FS-118.4 | Existe la interfaz de creación base y están resueltas D-1 y D-2; se coordina con FS-118.1. | Ídem. |
 | FS-118.5 | Existe la lista y hay interfaz acordada con FS-118.2 y FS-118.3 (no necesita que estén terminadas). | Han cerrado FS-118.2 y FS-118.3, con la fecha o su ausencia y el resultado de la regla reales. |
-| FS-118.6 | Puede empezar test-first cuando se conocen los comportamientos. | Han cerrado FS-118.1 y FS-118.3, y existe el aislamiento de pruebas (parte funcional). |
+| FS-118.6 | Puede empezar test-first: ninguna dependencia bloquea su inicio; los casos que dependen de D-2, D-3 y D-4 esperan a esas decisiones. | Han cerrado FS-118.1 y FS-118.3, y existe el aislamiento de pruebas (parte funcional). |
 | FS-118.7 | Puede empezar: preparar escenarios y datos, y verificar lo ya disponible. | Han cerrado FS-118.4, FS-118.5 y FS-118.6 (pruebas relevantes completas y en verde), con los estados existentes. |
 
 ### 9.3 Orden de ejecución (conveniencia, no bloqueo)
