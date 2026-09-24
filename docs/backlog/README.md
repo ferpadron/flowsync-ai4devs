@@ -10,7 +10,7 @@ Si dos documentos discrepan, manda el de nivel superior.
 | Nivel | Documento | Papel |
 |---|---|---|
 | 1 | [`../prd/alcance-mvp.md`](../prd/alcance-mvp.md) | Fuente original del alcance del MVP. |
-| 2 | [`../prd/flowsync-mvp.md`](../prd/flowsync-mvp.md) | PRD, sincronizado con el alcance. Determina qué está dentro y fuera del MVP. |
+| 2 | [`../prd/flowsync-mvp.md`](../prd/flowsync-mvp.md) | PRD (Borrador), sincronizado con el alcance; detalla lo que el alcance confirma. |
 | 3 | [`E2-gestion-tareas/FS-118.md`](./E2-gestion-tareas/FS-118.md) y [`E2-gestion-tareas/FS-142.md`](./E2-gestion-tareas/FS-142.md) | Historias con sus criterios de aceptación, revisadas por una persona. La planificación no modifica sus criterios. |
 | 4 | Planificación (este directorio, ver el índice) | Subordinada a los niveles 1 a 3. No añade requisitos, criterios de aceptación ni decisiones de producto. |
 
@@ -68,7 +68,7 @@ Registrada el 2026-09-23. La fuente de verdad sigue siendo este repositorio: Jir
 | FS-118.7 | MINI-15 | Subtask | MINI-7 |
 | FS-142.1 | MINI-16 | Subtask | MINI-8 |
 
-- Las descripciones de Jira reproducen la planificación transferida del commit `f85701b`, con su estado `PLANIFICACIÓN REVISADA`. No constituyen autorización de ejecución ni compromiso de entrega.
+- Las descripciones de Jira reproducen la planificación transferida del commit `f85701b`, con su estado `PLANIFICACIÓN REVISADA`, salvo MINI-13, MINI-14 y MINI-15, cuyas referencias a D-4 se sincronizaron posteriormente con la corrección documental `c93fc41`. No constituyen autorización de ejecución ni compromiso de entrega.
 - Las historias y subtareas se crearon sin asignar y en «Tareas por hacer». No hay enlaces Jira entre issues: las dependencias de inicio, cierre y coordinación viven solo como texto en cada descripción y en las descomposiciones.
 - La prioridad «Medium» de las issues creadas (historias y subtareas) la aplicó Jira por defecto. No expresa prioridad de negocio; esa vive en [`priorizacion-mvp.md`](./priorizacion-mvp.md).
 - La contingencia de división de FS-142 no tiene issue ni clave y no figura en esta tabla.
