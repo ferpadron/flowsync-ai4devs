@@ -1,7 +1,7 @@
 # Backlog de FlowSync — índice y convenciones
 
 > Última actualización: 2026-09-23.
-> Este directorio contiene las historias del MVP con sus criterios de aceptación y la planificación derivada de ellas (descomposición en tickets, dependencias, estimaciones preliminares y priorización). Origen de la planificación: sesión de planificación del ejercicio (pasos P11, P11b, P12, P13, P14 y P14b).
+> Este directorio contiene las historias del MVP con sus criterios de aceptación y la planificación derivada de ellas (descomposición en tickets, dependencias, estimaciones preliminares y priorización). Origen de la planificación: sesión de planificación del ejercicio (pasos P11, P11b, P12, P13, P14, P14b y P15).
 
 ## 1. Jerarquía documental
 
@@ -40,12 +40,35 @@ Definido una sola vez; el resto de documentos usa estas etiquetas.
 ## 4. Identificadores
 
 - **`FS-118`, `FS-142`:** historias persistidas.
-- **`FS-118.1` a `FS-118.7` y `FS-142.1`:** tickets provisionales de planificación. No existen en Jira ni en ningún otro sistema.
+- **`FS-118.1` a `FS-118.7` y `FS-142.1`:** identificadores documentales de los tickets de planificación. Existen en Jira como subtareas, con las claves reales de la sección 4.1. Dentro de estos documentos sigue mandando el identificador documental.
 - **Contingencia de división de FS-142:** no aprobada. Su identificador solo aparece en la sección contingente de [`E2-gestion-tareas/FS-142-descomposicion.md`](./E2-gestion-tareas/FS-142-descomposicion.md), y no figura en ninguna tabla, matriz ni grafo.
 - **`HU-E2-01` y `HU-E2-03`:** identificadores provisionales del ejercicio para historias de E2 que no están persistidas.
 - **`RF-n`, `DP-n`, `PA-n`:** requisitos, decisiones y puntos abiertos del PRD. PA-1 está cerrado por DP-1.
 - **`D-1` a `D-5`:** etiquetas de planificación que agrupan las ocho ambigüedades documentadas en `FS-118.md`.
-- No se han creado identificadores de Jira.
+- Las claves de Jira se registran solo en la sección 4.1; el resto de documentos usa los identificadores documentales.
+
+### 4.1 Correspondencia con Jira (proyecto MINI)
+
+Registrada el 2026-09-23. La fuente de verdad sigue siendo este repositorio: Jira es una copia de trabajo y, si discrepan, manda el documento (sección 1).
+
+| ID documental | Clave Jira | Tipo | Parent |
+|---|---|---|---|
+| FS-118 | MINI-7 | Historia | — |
+| FS-142 | MINI-8 | Historia | — |
+| FS-118.1 | MINI-9 | Subtask | MINI-7 |
+| FS-118.2 | MINI-10 | Subtask | MINI-7 |
+| FS-118.3 | MINI-11 | Subtask | MINI-7 |
+| FS-118.4 | MINI-12 | Subtask | MINI-7 |
+| FS-118.5 | MINI-13 | Subtask | MINI-7 |
+| FS-118.6 | MINI-14 | Subtask | MINI-7 |
+| FS-118.7 | MINI-15 | Subtask | MINI-7 |
+| FS-142.1 | MINI-16 | Subtask | MINI-8 |
+
+- Las descripciones de Jira reproducen la planificación transferida del commit `f85701b`, con su estado `PLANIFICACIÓN REVISADA`. No constituyen autorización de ejecución ni compromiso de entrega.
+- Las historias y subtareas se crearon sin asignar y en «Tareas por hacer». No hay enlaces Jira entre issues: las dependencias de inicio, cierre y coordinación viven solo como texto en cada descripción y en las descomposiciones.
+- La prioridad «Medium» de las subtareas la aplicó Jira por defecto. No expresa prioridad de negocio; esa vive en [`priorizacion-mvp.md`](./priorizacion-mvp.md).
+- La contingencia de división de FS-142 no tiene issue ni clave y no figura en esta tabla.
+- MINI-4, MINI-5 y MINI-6 son issues previas del proyecto, ajenas a esta planificación.
 
 ## 5. Qué no es este directorio
 
